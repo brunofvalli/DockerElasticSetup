@@ -13,5 +13,5 @@ sudo docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9
 
 ## Step Kibana
 ```
-docker run -d --name kibana --net somenetwork -p 5601:5601 -e "XPACK_SECURITY_ENABLED=false" --restart=always --name kibana kibana:7.3.0
+docker run -d --name kibana --net somenetwork -p 5601:5601 -e "XPACK_SECURITY_ENABLED=false" -e "ELASTICSEARCH_URL=http://192.168.2.101:9200" --restart=always --name kibana kibana:7.3.0
 ```
