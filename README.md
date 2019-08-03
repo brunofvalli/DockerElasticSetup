@@ -15,3 +15,15 @@ sudo docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9
 ```
 docker run -d --name kibana --net somenetwork -p 5601:5601 -e "XPACK_SECURITY_ENABLED=false" -e "ELASTICSEARCH_URL=http://192.168.2.101:9200" --restart=always --name kibana kibana:7.3.0
 ```
+
+### Open Bash to the kibana entry
+
+```
+sudo docker exec -it kibana /bin/bash
+```
+
+### Open config file
+
+```
+vi /usr/share/kibana/config/kibana.yml
+```
